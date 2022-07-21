@@ -1,0 +1,35 @@
+pre {
+    white-space: pre-wrap; 
+    word-break: break-all;
+    font-size: 0.5em;
+}
+.msg-box {
+    overflow-y: scroll;
+    height: 10em;
+    list-style: none;
+    padding: 0 .5em;
+    gap: .5em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.msg-box li.sender-me {
+    align-self: flex-end;
+    border-right: .3em solid var(--info);
+}
+.msg-box li {
+    background: var(--secondary);
+    border-radius: .35em;
+    font-size: 0.75em;
+    padding: .5em;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    flex: 0 1 auto;
+    width: auto;
+}
+.msg-box li.sender-me span.sender-ts {
+    align-self: flex-end;
+}
+.msg-box li.sender-him {
+    align-self: flex-start;
+    border-left: .3em solid var(--info);
+}

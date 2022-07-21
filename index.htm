@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="index.mjs" type="module"></script>
+    <link rel="stylesheet" href="node_modules/@forevolve/bootstrap-dark/dist/css/bootstrap-dark.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="jumbotron">
+    <section class="steps-choice">
+        <h2 class="display-2">Who am i?</h2>
+        <p>
+            <button class="btn btn-lg btn-outline-info choice-initiator">I am an initiator</button>
+            <button class="btn btn-lg btn-outline-info choice-peer">I am a peer</button>
+        </p>
+    </section>
+    
+    <section class="initiator d-none">
+        <section class="step-01">
+            <h1>Step 1 - Initiator</h1>
+            <p>Copy the following to the peer:</p>
+            <pre contentEditable onclick="dom_select(this)" class="text-white" onclick="">x</pre>
+            <p>Paste the answer given by the peer:</p>
+            <p><textarea class="answer form-control"></textarea></p>
+            <p>
+                <button class="btn btn-outline-info btn-block has-answer">Accept answer</button>
+            </p>
+        </section>
+
+        <div class="connected d-none">
+            <h1>Initiator [Connected]</h1>
+            <div class="obsidian-portal">
+                <video src="" controls class="w-100"></video>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="peer d-none">
+        <section class="step-01">
+            <h1>Step 1 - Peer</h1>
+            <p>Paste the given text from the initiator:</p>
+            <p><textarea class="offer form-control"></textarea></p>
+            <p>
+                <button class="btn btn-outline-info btn-block has-offer">Generate answer</button>
+            </p>
+        </section>
+        <section class="step-02 d-none">
+            <h1>Step 2 - Peer</h1>
+            <p>Use the following answer:</p>
+            <pre contentEditable onclick="dom_select(this)" class="text-white">y</pre>
+        </section>
+        <section class="connected d-none">
+            <h1>Peer [Connected]</h1>
+            <div class="obsidian-portal">
+                <video src="" controls class="w-100"></video>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="obsidian d-none">
+        <h1>Connected</h1>
+        
+        <ul class="msg-box">
+            <!-- <li class="sender-me"><span class="sender-ts">02:23:33</span><div class="sender-text">New messages appear here</div></li>
+            <li class="sender-him"><span class="sender-ts">02:23:33</span><div class="sender-text">New messages appear here</div></li> -->
+        </ul>
+        <textarea class="msg-sender form-control" placeholder="Message"></textarea>
+    </section>
+    </div>
+</body>
+</html>
